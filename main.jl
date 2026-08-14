@@ -9,6 +9,7 @@ import ForwardDiff
 import ReverseDiff
 import Mooncake
 import Enzyme: set_runtime_activity, Forward, Reverse, Const
+import Differ: AutoDifferReverse, AutoDifferForwards
 
 # AD backends to test.
 ADTYPES = Dict(
@@ -16,6 +17,8 @@ ADTYPES = Dict(
     "ForwardDiff" => AutoForwardDiff(),
     "ReverseDiff" => AutoReverseDiff(; compile = false),
     "ReverseDiffCompiled" => AutoReverseDiff(; compile = true),
+    "DifferRvs" => AutoDifferReverse(),
+    "DifferFwd" => AutoDifferForwards(),
     "MooncakeRvs" => AutoMooncake(),
     "MooncakeFwd" => AutoMooncakeForward(),
     "EnzymeFwd" => AutoEnzyme(;
