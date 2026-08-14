@@ -42,7 +42,7 @@ ddedata = rand.(Poisson.(q .* Array(sol_dde)))
     )
     ϵ = 1e-5
     for i in eachindex(predicted)
-        data[:, i] ~ arraydist(Poisson.(q .* predicted[i] .+ ϵ))
+        data[:, i] ~ product_distribution(Poisson.(q .* predicted[i] .+ ϵ))
     end
     return nothing
 end
