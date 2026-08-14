@@ -5,19 +5,22 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "monthly"
-  - package-ecosystem: "julia"
-    directories: # Location of Julia projects
-      - "/"
-    schedule:
-      interval: "daily"
-    groups:
-      # Group all Julia package updates into a single PR:
-      all-julia-packages:
-        patterns:
-          - "*"
-    ignore:
-      # broken AD
-      - dependency-name: "Turing"
-        versions: [ ">=0.46" ]
-      - dependency-name: "DynamicPPL"
-        versions: [ ">=0.42" ]
+
+  # Don't version packages explicitly, let the resolver do it
+  #
+  # - package-ecosystem: "julia"
+  #   directories: # Location of Julia projects
+  #     - "/"
+  #   schedule:
+  #     interval: "daily"
+  #   groups:
+  #     # Group all Julia package updates into a single PR:
+  #     all-julia-packages:
+  #       patterns:
+  #         - "*"
+  #   ignore:
+  #     # broken AD
+  #     - dependency-name: "Turing"
+  #       versions: [ ">=0.46" ]
+  #     - dependency-name: "DynamicPPL"
+  #       versions: [ ">=0.42" ]
