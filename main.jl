@@ -137,7 +137,8 @@ end
 @include_model "PosteriorDB" "pdb_rats"
 @include_model "PosteriorDB" "pdb_sblrc"
 @include_model "PosteriorDB" "pdb_sblri"
-@include_model "External libraries" "delaydiffeq"
+# TODO: fix
+# @include_model "External libraries" "delaydiffeq"
 @include_model "External libraries" "ordinarydiffeq"
 @include_model "External libraries" "lux_nn"
 @include_model "External libraries" "abstractgps"
