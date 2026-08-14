@@ -100,7 +100,7 @@ jobs:
 
       - name: Output matrix values
         id: output-matrix
-        uses: penelopeysm/matrix-output@main
+        uses: beacon-biosignals/matrix-output@e7e337124face37359a51aa7dd8674c512936eef # 1.0.4
         with:
           yaml: |
             model_name: ${{ matrix.model }}
