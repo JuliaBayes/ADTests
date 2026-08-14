@@ -19,7 +19,7 @@ import argparse
 from pathlib import Path
 from warnings import warn
 
-JULIA_COMMAND = ["julia", "--color=yes", "--project=.", "main.jl"]
+JULIA_COMMAND = ["julia", "+1.13", "--color=yes", "--project=.", "main.jl"]
 
 
 def try_float(value):
