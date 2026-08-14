@@ -138,7 +138,7 @@
         </div>
 
         <div class="warning">
-            Note: Results are from Julia 1.11.
+            Note: Results are from Julia 1.13.
         </div>
 
         <div class="results-header">
