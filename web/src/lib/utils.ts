@@ -11,9 +11,9 @@ const AD_BACKEND_ORDER: Record<string, number> = {
     /* Reverse mode */
     ReverseDiff: 21,
     ReverseDiffCompiled: 22,
-    EnzymeRev: 23,
-    DifferRev: 24,
-    MooncakeRev: 25,
+    EnzymeRvs: 23,
+    DifferRvs: 24,
+    MooncakeRvs: 25,
 };
 
 function compareADBackends(a: string, b: string): number {
