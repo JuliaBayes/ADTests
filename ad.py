@@ -19,7 +19,11 @@ import argparse
 from pathlib import Path
 from warnings import warn
 
-JULIA_COMMAND = ["julia", "+1.13", "--color=yes", "--project=.", "main.jl"]
+# On CI, Julia isn't installed via juliaup, so `+1.13` is interpreted as a file
+# rather than a channel specifier. To make it use the correct version we just
+# install 1.13 upfront in the GitHub Actions workflow
+JULIA_CHANNEL = [] if os.getenv("CI") else ["+1.13"]
+JULIA_COMMAND = ["julia", *JULIA_CHANNEL, "--color=yes", "--project=.", "main.jl"]
 
 
 def try_float(value):
