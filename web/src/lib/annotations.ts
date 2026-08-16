@@ -19,14 +19,19 @@ const KNOWN_ISSUES: KnownIssue[] = [
         url: "https://github.com/EnzymeAD/Enzyme.jl/issues/1995",
         affects: [
             ["assume_mvnormal", "EnzymeFwd"],
-            ["assume_wishart", "EnzymeFwd"],
+        ],
+    },
+    {
+        url: "https://github.com/EnzymeAD/Enzyme.jl/issues/3464",
+        affects: [
+            ["assume_wishart", "EnzymeRvs"],
         ],
     },
     {
         url: "https://github.com/chalk-lab/Mooncake.jl/issues/570",
         affects: [
-            ["multithreaded", "MooncakeFwd"],
-            ["multithreaded", "MooncakeRvs"],
+            ["threaded_assume", "MooncakeRvs"],
+            ["threaded_observe", "MooncakeRvs"],
         ],
     },
 ];
