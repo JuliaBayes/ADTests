@@ -20,11 +20,9 @@ ADTYPES = Dict(
     "MooncakeFwd" => AutoMooncakeForward(),
     "EnzymeFwd" => AutoEnzyme(;
         mode = set_runtime_activity(Forward, true),
-        function_annotation = Const,
     ),
     "EnzymeRvs" => AutoEnzyme(;
         mode = set_runtime_activity(Reverse, true),
-        function_annotation = Const,
     ),
 )
 
