@@ -6,12 +6,14 @@ const AD_BACKEND_ORDER: Record<string, number> = {
     /* Forward mode */
     ForwardDiff: 11,
     EnzymeFwd: 12,
-    MooncakeFwd: 13,
+    DifferFwd: 13,
+    MooncakeFwd: 14,
     /* Reverse mode */
     ReverseDiff: 21,
     ReverseDiffCompiled: 22,
-    EnzymeRev: 23,
-    MooncakeRev: 24,
+    EnzymeRvs: 23,
+    DifferRvs: 24,
+    MooncakeRvs: 25,
 };
 
 function compareADBackends(a: string, b: string): number {

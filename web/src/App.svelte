@@ -80,7 +80,7 @@
                 <nav class="nav-links">
                     <a href="https://turinglang.org/docs">Turing.jl Docs</a>
                     <a href="https://github.com/TuringLang/Turing.jl">Turing.jl GitHub</a>
-                    <a href="https://github.com/TuringLang/ADTests">ADTests GitHub</a>
+                    <a href="https://github.com/JuliaBayes/ADTests">ADTests GitHub</a>
                 </nav>
             </div>
             <button
