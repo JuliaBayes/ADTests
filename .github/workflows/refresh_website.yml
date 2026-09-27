@@ -32,9 +32,9 @@ jobs:
 
       - name: Download results to web/src/data
         run: |
-          curl -O https://raw.githubusercontent.com/TuringLang/ADTests/refs/heads/gh-pages/${PR}adtests.json
-          curl -O https://raw.githubusercontent.com/TuringLang/ADTests/refs/heads/gh-pages/${PR}manifest.json
-          curl -O https://raw.githubusercontent.com/TuringLang/ADTests/refs/heads/gh-pages/${PR}model_definitions.json
+          curl -fO https://raw.githubusercontent.com/JuliaBayes/ADTests/refs/heads/gh-pages/${PR}adtests.json
+          curl -fO https://raw.githubusercontent.com/JuliaBayes/ADTests/refs/heads/gh-pages/${PR}manifest.json
+          curl -fO https://raw.githubusercontent.com/JuliaBayes/ADTests/refs/heads/gh-pages/${PR}model_definitions.json
         working-directory: web/src/data
         env:
           PR: ${{ github.event_name == 'pull_request' && 'pr/' || '' }}
